@@ -21,10 +21,6 @@ const startServer = async () => {
         // 2. Seed admin
         await seedAdmin();
 
-        // 3. Update class status and send today's notifications
-        await updateClassStatus();
-        await notifyTodayClassesOnStartup();
-
         // 4. Start server
         app.listen(PORT, () => {
             console.log(`🚀 Server running on port ${PORT}`);

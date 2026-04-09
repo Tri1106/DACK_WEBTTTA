@@ -7,15 +7,11 @@ import ResetPass from "../pages/authentication/reset-pass/ResetPass";
 import CompleteProfile from "../pages/authentication/complete-profile/CompleteProfile";
 
 import ListUser from "../pages/admin/list-user/ListUser";
-import ListCourses from "../pages/admin/list-course/ListCourse";
-import ListCalender from "../pages/admin/list-calender/ListCalender";
+
 import ListStudent from "../pages/admin/list-student/ListStudent";
 import ListTeacher from "../pages/admin/list-teacher/ListTeacher";
-import ListSalary from "../pages/admin/list-salary/ListSalary";
-import ClassDetail from "../pages/admin/class-detail/ClassDetail";
+
 import AccountDetail from "../pages/user/account-detail/AccountDetail";
-import MySalary from "../pages/teacher/MySalary";
-import SettingPage from "../pages/admin/setting/SettingPage";
 
 import NotFound from "../components/global/404/NotFound";
 
@@ -60,20 +56,10 @@ export default function AppRoutes() {
                         <Route path="list-user" element={<ListUser />} />
                         <Route path="list-student" element={<ListStudent />} />
                         <Route path="list-teacher" element={<ListTeacher />} />
-                        <Route path="list-salary" element={<ListSalary />} />
-                        <Route path="setting" element={<SettingPage />} />
-                    </Route>
-
-                    {/* TEACHER */}
-                    <Route element={<RoleRoute allowedRoles={["teacher"]} />}>
-                        <Route path="my-salary" element={<MySalary />} />
                     </Route>
 
                     {/* ALL ROLES */}
                     <Route element={<RoleRoute allowedRoles={["admin", "teacher", "student"]} />}>
-                        <Route path="list-courses" element={<ListCourses />} />
-                        <Route path="list-calender" element={<ListCalender />} />
-                        <Route path="class-detail/:id" element={<ClassDetail />} />
                         <Route path="account-detail" element={<AccountDetail />} />
                     </Route>
                 </Route>
