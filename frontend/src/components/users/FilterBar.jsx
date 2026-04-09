@@ -10,7 +10,7 @@ const FilterBar = ({ searchEmail, setSearchEmail, filterRole, setFilterRole, cur
 
             <div className="form-role">
                 <select value={filterRole} onChange={(e) => setFilterRole(e.target.value)}>
-                    <option value="">Select Role</option>
+                    <option value="">Chọn vai trò</option>
                     <option value="admin">Admin</option>
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
