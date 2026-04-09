@@ -83,3 +83,6 @@ export const deleteAccount = async (id) => {
         console.error(error);
     }
 };
+
+/* =========================================================
+   📚 COURSES / CLASSES APIs

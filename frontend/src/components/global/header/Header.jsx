@@ -14,10 +14,8 @@ const Header = ({ onSidebar }) => {
     const dropdownRef = useRef(null);
     const notiRef = useRef(null);
     const { notifications, loading, refreshNotifications, markAllRead } = useNotification();
-    console.log(notifications);
-    const avatarSrc = user?.avatar
-        ? `http://localhost:8080/uploads/${user.avatar}${user?.avatar_updated_at ? `?t=${user.avatar_updated_at}` : ""}`
-        : thumb;
+
+    const avatarSrc = user?.avatar ? `http://localhost:8080/uploads/${user.avatar}${user?.avatar_updated_at ? `?t=${user.avatar_updated_at}` : ""}` : thumb;
 
     const toggleDrop = () => setActiveDrop(!activeDrop);
 

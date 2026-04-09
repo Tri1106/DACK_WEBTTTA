@@ -30,9 +30,19 @@ app.get("/", (req, res) => {
 
 const userRoutes = require("../routes/user.routes");
 const authRoutes = require("../routes/auth.routes");
+const classRoutes = require("../routes/class.routes");
+const attendanceRoutes = require("../routes/attendance.routes");
+const sessionRoutes = require("../routes/session.routes");
+const notificationRoutes = require("../routes/notification.routes");
+const teacherSalaryRoutes = require("../routes/teacherSalary.routes");
 
 app.use("/api/auth", authRoutes);
+app.use("/api/classes", classRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/attendance", attendanceRoutes);
+app.use("/api/sessions", sessionRoutes);
+app.use("/api/notifications", notificationRoutes);
+app.use("/api/teacher-salaries", teacherSalaryRoutes);
 
 /* ========================
    EXPORT APP
