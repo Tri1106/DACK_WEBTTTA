@@ -83,10 +83,7 @@ export const deleteAccount = async (id) => {
         console.error(error);
     }
 };
-
-/* =========================================================
    📚 COURSES / CLASSES APIs
-========================================================= */
 
 // Lấy tất cả lớp
 export const getAllCourse = async (params = {}) => {
@@ -118,9 +115,7 @@ export const deleteCourse = async (id) => {
     return response.data;
 };
 
-/* =========================================================
    📥 UPLOAD STUDENTS
-========================================================= */
 
 // Upload danh sách học sinh bằng Excel
 export const uploadStudents = async (file, classId) => {
@@ -136,9 +131,7 @@ export const uploadStudents = async (file, classId) => {
     return response.data;
 };
 
-/* =========================================================
    🗓️ SESSIONS APIs
-========================================================= */
 
 // Tạo buổi học hôm nay (có thể có giáo viên thay)
 export const createTodaySession = async (classId, substituteTeacherId) => {
@@ -197,9 +190,7 @@ export const createMakeupSession = async (classId, offDate, makeupDate, start_ti
     }
 };
 
-/* =========================================================
    📊 ATTENDANCE APIs
-========================================================= */
 
 // Update điểm danh
 export const updateAttendance = async (sessionId, studentId, status) => {
@@ -217,9 +208,7 @@ export const getCoursesByStudentId = async (studentId) => {
     return response.data;
 };
 
-/* =========================================================
    🏫 CLASS MANAGEMENT APIs
-========================================================= */
 
 // Lấy lớp theo ngày
 export const getClassesByDate = async (date) => {
@@ -229,9 +218,7 @@ export const getClassesByDate = async (date) => {
     return response.data;
 };
 
-/* =========================================================
    💰 SALARY MANAGEMENT APIs
-========================================================= */
 
 // Lấy lương giáo viên (admin)
 export const getTeacherSalaries = async (month, year) => {
@@ -264,9 +251,7 @@ export const updateSalaryConfig = async (config) => {
     return response.data;
 };
 
-/* =========================================================
    🔔 NOTIFICATIONS APIs
-========================================================= */
 
 // Lấy tất cả thông báo của user hiện tại
 export const getAllNotifications = async () => {

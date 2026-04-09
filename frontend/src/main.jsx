@@ -16,9 +16,15 @@ createRoot(document.getElementById("root")).render(
     <StrictMode>
         <BrowserRouter>
             <AuthProvider>
-                <UserProvider>
-                    <App />
-                </UserProvider>
+                <NotificationProvider>
+                    <SalaryProvider>
+                        <CoursesProvider>
+                            <UserProvider>
+                                <App />
+                            </UserProvider>
+                        </CoursesProvider>
+                    </SalaryProvider>
+                </NotificationProvider>
             </AuthProvider>
         </BrowserRouter>
     </StrictMode>,
