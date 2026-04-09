@@ -15,7 +15,9 @@ const validationSchema = Yup.object({
 const validationSchemaAccount = Yup.object({
     email: Yup.string().email("Email không hợp lệ").required("Bắt buộc"),
     password: Yup.string().min(6, "Ít nhất 6 ký tự").required("Bắt buộc"),
-    repassword: Yup.string().oneOf([Yup.ref("password"), null], "Không khớp").required("Bắt buộc"),
+    repassword: Yup.string()
+        .oneOf([Yup.ref("password"), null], "Không khớp")
+        .required("Bắt buộc"),
 });
 
 const ListTeacher = () => {
@@ -121,7 +123,9 @@ const ListTeacher = () => {
                         <tbody>
                             {filteredUsers.length === 0 ? (
                                 <tr>
-                                    <td colSpan="5">Không tìm thấy tài khoản nào phù hợp.</td>
+                                    <td colSpan="5" className="none_class">
+                                        Không tìm thấy tài khoản nào phù hợp.
+                                    </td>
                                 </tr>
                             ) : (
                                 currentItems.map((item, i) => {

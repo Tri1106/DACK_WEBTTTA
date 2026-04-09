@@ -30,9 +30,9 @@ const ListUser = () => {
     return (
         <>
             <div className="layout-top">
-                <h1 className="headline-1">Quáº£n lÃ½ tÃ i khoáº£n</h1>
+                <h1 className="headline-1">Quản lý tài khoản</h1>
                 <button className="c-button-1" onClick={() => ui.setIsCreateModalOpen(true)}>
-                    <i className="fa-regular fa-square-plus" /> ThÃªm tÃ i khoáº£n
+                    <i className="fa-regular fa-square-plus" /> Thêm tài khoản
                 </button>
             </div>
             <div className="layout-box">
@@ -103,4 +103,3 @@ const ListUser = () => {
 };
 
 export default ListUser;
-

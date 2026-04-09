@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect, useMemo } from "react";
 
-const usePagination = (fullData = [], filteredData = [], defaultItemsPerPage = 7) => {
-    const dataToUse = filteredData.length > 0 ? filteredData : fullData;
+const usePagination = (fullData = [], filteredData = null, defaultItemsPerPage = 7) => {
+    const dataToUse = Array.isArray(filteredData) ? filteredData : fullData;
 
     const [itemsPerPage] = useState(defaultItemsPerPage); // giữ cố định mặc định 7
     const [currentPage, setCurrentPage] = useState(1);
